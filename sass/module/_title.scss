@@ -1,0 +1,13 @@
+.title {
+  writing-mode: vertical-rl;
+  width: 20%;
+  letter-spacing: 0.2em;
+  @include rem(30);
+  font-family: $font-en;
+  .title-jp {
+    font-family: $font-jp;
+    @include rem(14);
+    letter-spacing: $ls-txt;
+    padding-top: 20px;
+  }
+}

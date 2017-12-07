@@ -1,0 +1,26 @@
+#skill {
+  writing-mode: vertical-rl;
+  position: absolute;
+  right: 0;
+  padding: 70px 0 50px 0;
+  .skill-txt {
+    writing-mode: vertical-rl;
+    width: 80%;
+    margin: 0 auto;
+    &-top {}
+    &-bottom {}
+    .github-link {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url(../../img/skill_ico_github.svg);
+      background-size: 100% 100%;
+    }
+    li {
+      margin-top: 3em;
+    }
+    p {
+      height: 260px;
+    }
+  }
+}

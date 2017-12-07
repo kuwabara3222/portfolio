@@ -1,0 +1,338 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.inner {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative; }
+
+.container {
+  width: 80%;
+  -webkit-writing-mode: horizontal-tb;
+  -ms-writing-mode: lr-tb;
+  writing-mode: horizontal-tb; }
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  height: 100%;
+  min-width: 320px;
+  color: #fff;
+  background-color: #1b1b1b;
+  font-family: "游明朝 light", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", "Noto Sans Japanese light", Sans-Serif;
+  line-height: 1.9;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#nav {
+  display: none;
+  position: relative;
+  z-index: 100;
+  height: 50px;
+  -webkit-box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.5); }
+  #nav .gnav {
+    list-style-type: none;
+    position: relative;
+    top: 50px; }
+    #nav .gnav li {
+      width: 100%;
+      text-align: center;
+      line-height: 50px;
+      background-color: rgba(27, 27, 27, 0.8);
+      border-bottom: 1px solid #434343; }
+      #nav .gnav li:nth-child(3) {
+        position: absolute;
+        top: -50px;
+        padding-top: 6px; }
+      #nav .gnav li a {
+        font-size: 11px;
+        font-size: 1.1rem;
+        color: #fff;
+        font-family: "Montserrat thin", sans-serif;
+        letter-spacing: 0.2em;
+        text-decoration: none; }
+      #nav .gnav li .nav-logo {
+        display: inline-block;
+        text-indent: -9999em;
+        width: 35px;
+        height: 35px;
+        background: url(../../img/nav_logo.png) no-repeat center center;
+        background-size: 100% 100%; }
+
+@media screen and (min-width: 768px) {
+  .gnav {
+    position: fix;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none; }
+    .gnav li {
+      width: 20%;
+      text-align: center;
+      line-height: 50px; }
+      .gnav li:nth-child(3) {
+        padding-top: 6px; }
+      .gnav li a {
+        font-size: 11px;
+        font-size: 1.1rem;
+        color: #fff;
+        font-family: "Montserrat thin", sans-serif;
+        letter-spacing: 0.2em;
+        text-decoration: none; }
+      .gnav li .nav-logo {
+        display: inline-block;
+        text-indent: -9999em;
+        width: 35px;
+        height: 35px;
+        background: url(../../img/nav_logo.png) no-repeat center center;
+        background-size: 100% 100%; } }
+
+#header {
+  height: 100%;
+  background: url(../../img/mv_sp@2x.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative; }
+  #header .header-logo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    width: 151px;
+    height: 159px;
+    background: url(../../img/mv_logo@2x.png) no-repeat center center;
+    background-size: 100% 100%;
+    text-indent: -9999em; }
+
+@media screen and (min-width: 768px) {
+  #header {
+    background-image: url(../../img/mv@2x.jpg); }
+    #header .header-logo {
+      width: 239px;
+      height: 252px; } }
+
+#main {
+  -webkit-writing-mode: horizontal-tb;
+  -ms-writing-mode: lr-tb;
+  writing-mode: horizontal-tb;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.title {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  width: 20%;
+  letter-spacing: 0.2em;
+  font-size: 30px;
+  font-size: 3rem;
+  font-family: "Montserrat thin", sans-serif; }
+  .title .title-jp {
+    font-family: "游明朝 light", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", "Noto Sans Japanese light", Sans-Serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+    padding-top: 20px; }
+
+#about {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  position: absolute;
+  right: 0;
+  padding: 70px 0 50px 0; }
+  #about .about-img {
+    margin: 0 auto 35px;
+    width: 180px;
+    height: 180px;
+    background: url(../../img/about_img@2x.png);
+    background-size: 100% 100%; }
+  #about .about-txt {
+    margin: 0 auto;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    #about .about-txt-top {
+      padding-bottom: 18px;
+      border-bottom: 1px solid #fff;
+      margin-bottom: 18px; }
+    #about .about-txt .name {
+      margin-left: 1.9em; }
+    #about .about-txt p {
+      text-indent: 1em;
+      height: 260px; }
+
+@media screen and (min-width: 768px) {
+  #about {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 0;
+    padding: 190px 0 140px 0; }
+    #about .about-img {
+      width: 200px;
+      height: 200px;
+      background: url(../../img/about_img@2x.png);
+      background-size: 100% 100%; } }
+
+#skill {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  position: absolute;
+  right: 0;
+  padding: 70px 0 50px 0; }
+  #skill .skill-txt {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    width: 80%;
+    margin: 0 auto; }
+    #skill .skill-txt .github-link {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url(../../img/skill_ico_github.svg);
+      background-size: 100% 100%; }
+    #skill .skill-txt li {
+      margin-top: 3em; }
+    #skill .skill-txt p {
+      height: 260px; }
+
+#work {
+  display: none; }
+
+#contact {
+  display: none; }

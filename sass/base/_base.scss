@@ -1,0 +1,28 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-width: 320px;
+  color: $color-txt;
+  background-color: $color-base;
+  font-family: $font-jp;
+  line-height: $lh-txt;
+  letter-spacing: $ls-txt;
+  @include rem(14);
+}
+
+//共通のcss
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

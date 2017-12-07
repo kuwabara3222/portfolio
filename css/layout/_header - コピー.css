@@ -1,0 +1,16 @@
+#header {
+  height: 100%;
+  background: url(../../img/mv@2x.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative; }
+  #header .header-logo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 239px;
+    height: 252px;
+    background: url(../../img/mv_logo@2x.png) no-repeat center center;
+    background-size: 100% 100%;
+    text-indent: -9999em; }

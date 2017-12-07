@@ -1,0 +1,44 @@
+%cf {
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin rem($base:14) {
+  font-size: $base+px;
+  font-size: ($base/10)+rem;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.container {
+  width: 80%;
+  writing-mode: horizontal-tb;
+}
+
+$size-max: 1000px;
+$color-base: #1b1b1b;
+$color-txt: #fff;
+$pc: 768px;
+$lh-title: 1;
+$lh-txt: 1.9;
+$ls-txt: 0.2em;
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+$font-jp: "游明朝 light",
+"ヒラギノ明朝 ProN W3",
+"Hiragino Mincho ProN",
+"ＭＳ Ｐ明朝",
+"MS PMincho",
+"Noto Sans Japanese light",
+Sans-Serif;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+$font-en: 'Montserrat thin',
+sans-serif;

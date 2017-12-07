@@ -1,0 +1,17 @@
+@charset "utf-8";
+//共通の設定
+@import "base/setting";
+@import "base/reset";
+@import "base/base";
+//レイアウト
+@import "layout/nav";
+@import "layout/header";
+@import "layout/main";
+//パーツ
+@import "module/title";
+//ページ
+@import "page/mv";
+@import "page/about";
+@import "page/skill";
+@import "page/work";
+@import "page/contact";
