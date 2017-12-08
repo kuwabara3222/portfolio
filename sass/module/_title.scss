@@ -5,6 +5,7 @@
   @include rem(30);
   font-family: $font-en;
   .title-jp {
+    line-height: $lh-title;
     font-family: $font-jp;
     @include rem(14);
     letter-spacing: $ls-txt;

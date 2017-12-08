@@ -1,20 +1,47 @@
 #skill {
   writing-mode: vertical-rl;
   position: absolute;
+  top: 892px;
   right: 0;
   padding: 70px 0 50px 0;
+  background: url(../../img/skill_bg_sp@2x.jpg) no-repeat center center;
+  background-size: cover;
   .skill-txt {
     writing-mode: vertical-rl;
-    width: 80%;
     margin: 0 auto;
-    &-top {}
-    &-bottom {}
-    .github-link {
-      display: block;
-      width: 40px;
-      height: 40px;
-      background: url(../../img/skill_ico_github.svg);
-      background-size: 100% 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    &-top {
+      width: 207px;
+      height: 260px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #fff;
+      margin-bottom: 18px;
+    }
+    &-bottom {
+      width: 207px;
+      height: 260px;
+      position: relative;
+      .github {
+        position: absolute;
+        bottom: 0;
+        p {
+          display: none;
+        }
+        &-link {
+          display: block;
+          text-indent: -9999em;
+          width: 40px;
+          height: 40px;
+          background: url(../../img/skill_ico_github.svg);
+          background-size: 100% 100%;
+        }
+      }
+    }
+    .design {
+      margin-right: 1.9em;
     }
     li {
       margin-top: 3em;
