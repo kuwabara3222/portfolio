@@ -424,6 +424,10 @@ img {
     bottom: auto; }
 
 @media screen and (min-width: 768px) {
+  #nav .menu-trigger {
+    display: none; }
+  #nav .nav-logo.sp {
+    display: none; }
   #nav .gnav {
     position: fix;
     display: -webkit-box;
@@ -437,6 +441,7 @@ img {
       text-align: center;
       line-height: 50px; }
       #nav .gnav li:nth-child(3) {
+        display: block;
         padding-top: 6px; }
       #nav .gnav li a {
         font-size: 11px;
@@ -677,6 +682,33 @@ img {
     #skill .skill-txt p {
       height: 260px; }
 
+@media screen and (min-width: 768px) {
+  #skill {
+    background: url(../../img/skill_bg@2x.jpg);
+    background-size: cover; }
+    #skill .skill-txt {
+      float: right;
+      margin: 0 auto;
+      width: auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #skill .skill-txt-top {
+        border-bottom: none; } }
+
 #work {
   margin-bottom: 48px; }
   #work .work-slide {
@@ -692,6 +724,10 @@ img {
       #work .work-slide li:nth-child(1) a {
         display: block;
         background: url(../../img/work_img1@2x.jpg) no-repeat center center; }
+
+@media screen and (min-width: 768) {
+  #work .work-slide {
+    width: auto; } }
 
 #contact {
   height: 550px;

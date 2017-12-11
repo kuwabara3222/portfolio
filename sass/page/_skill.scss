@@ -46,4 +46,21 @@
   }
 }
 
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+  #skill {
+    background: url(../../img/skill_bg@2x.jpg);
+    background-size: cover;
+    .skill-txt {
+      float: right;
+      margin: 0 auto;
+      width: auto;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      &-top {
+        border-bottom: none;
+      }
+    }
+  }
+}
