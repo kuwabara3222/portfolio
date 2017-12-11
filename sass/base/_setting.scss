@@ -15,13 +15,15 @@
   margin: 0 auto;
   max-width: 1000px;
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   position: relative;
+  padding: 70px 0 50px 0;
 }
 
 .container {
-  width: 80%;
-  writing-mode: horizontal-tb;
+  width: 85%;
+  position: relative;
 }
 
 $size-max: 1000px;

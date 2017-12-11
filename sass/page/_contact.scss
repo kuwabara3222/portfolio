@@ -1,3 +1,16 @@
 #contact {
-  display: none;
+  height: 550px;
+  background: url(../../img/contact_bg_sp@2x.jpg) no-repeat center center;
+  background-size: cover;
+  .contact-box {
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 120px;
+    height: 260px;
+    padding: 15px;
+    background-color: $color-base;
+    border: 1px solid #fff;
+  }
 }

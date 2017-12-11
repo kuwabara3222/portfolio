@@ -1,40 +1,34 @@
 #skill {
-  writing-mode: vertical-rl;
-  position: absolute;
-  top: 892px;
-  right: 0;
-  padding: 70px 0 50px 0;
+  width: 100%;
   background: url(../../img/skill_bg_sp@2x.jpg) no-repeat center center;
   background-size: cover;
   .skill-txt {
-    writing-mode: vertical-rl;
+    width: 211px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     position: relative;
     &-top {
-      width: 207px;
+      writing-mode: vertical-rl;
+      width: 211px;
       height: 260px;
       padding-bottom: 18px;
       border-bottom: 1px solid #fff;
       margin-bottom: 18px;
     }
     &-bottom {
-      width: 207px;
+      writing-mode: vertical-rl;
       height: 260px;
-      position: relative;
       .github {
-        position: absolute;
-        bottom: 0;
         p {
           display: none;
         }
         &-link {
           display: block;
           text-indent: -9999em;
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
           background: url(../../img/skill_ico_github.svg);
           background-size: 100% 100%;
         }
@@ -51,3 +45,5 @@
     }
   }
 }
+
+@media screen and (min-width:768px) {}

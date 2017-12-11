@@ -1,70 +1,131 @@
-#nav {
-  display: none;
-  position: relative;
-  z-index: 100;
-  height: 50px;
-  box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.5);
-  .gnav {
-    list-style-type: none;
+  #nav {
     position: relative;
-    top: 50px;
-    li {
+    z-index: 50;
+    height: 50px;
+    box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.5);
+    //      .nav-container {
+    //      z-index: 100;
+    //      position: absolute;
+    //      bottom: 0;
+    //      left: 0;
+    //      top: auto;
+    //      width: 100%;
+    //    }
+    //    メニューボタン
+    .menu-trigger,
+    .menu-trigger span {
+      display: inline-block;
+      transition: all .4s;
+      box-sizing: border-box;
+    }
+    .menu-trigger {
+      position: relative;
+      width: 50px;
+      height: 44px;
+      float: right;
+    }
+    .menu-trigger span {
+      position: absolute;
+      left: 0;
       width: 100%;
-      text-align: center;
-      line-height: 50px;
-      background-color: rgba(27, 27, 27, 0.8);
-      border-bottom: 1px solid #434343;
-      &:nth-child(3) {
-        position: absolute;
-        top: -50px;
-        padding-top: 6px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 4px;
+    }
+    .menu-trigger span:nth-of-type(1) {
+      top: 0;
+    }
+    .menu-trigger span:nth-of-type(2) {
+      top: 20px;
+    }
+    .menu-trigger span:nth-of-type(3) {
+      bottom: 0;
+    }
+    .menu-trigger.active span:nth-of-type(1) {
+      -webkit-transform: translateY(20px) rotate(-45deg);
+      transform: translateY(20px) rotate(-45deg);
+    }
+    .menu-trigger.active span:nth-of-type(2) {
+      opacity: 0;
+    }
+    .menu-trigger.active span:nth-of-type(3) {
+      -webkit-transform: translateY(-20px) rotate(45deg);
+      transform: translateY(-20px) rotate(45deg);
+    }
+    //    メニューボタンここまで
+    .nav-logo.sp {
+      display: inline-block;
+      text-indent: -9999em;
+      width: 35px;
+      height: 35px;
+      background: url(../../img/nav_logo.png) no-repeat center center;
+      background-size: 100% 100%;
+      position: absolute;
+      top: 7px;
+      right: 50%;
+      margin-right: -17px;
+    }
+    .gnav {
+      display: none;
+      position: absolute;
+      top: 50px;
+      width: 100%;
+      list-style-type: none;
+      li {
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+        background-color: rgba(27, 27, 27, 0.8);
+        border-bottom: 1px solid #434343;
+        &:nth-child(3) {
+          display: none;
+        }
+        a {
+          @include rem(11);
+          color: $color-txt;
+          font-family: $font-en;
+          letter-spacing: 0.2em;
+          text-decoration: none;
+        }
       }
-      a {
-        @include rem(11);
-        color: $color-txt;
-        font-family: $font-en;
-        letter-spacing: 0.2em;
-        text-decoration: none;
-      }
-      .nav-logo {
-        display: inline-block;
-        text-indent: -9999em;
-        width: 35px;
-        height: 35px;
-        background: url(../../img/nav_logo.png) no-repeat center center;
-        background-size: 100% 100%;
+    }
+    .sticky {
+      position: fixed;
+      top: 0;
+      bottom: auto;
+    }
+  }
+  
+  @media screen and (min-width:768px) {
+    #nav {
+      .gnav {
+        position: fix;
+        display: flex;
+        list-style-type: none;
+        li {
+          display: block;
+          width: 20%;
+          text-align: center;
+          line-height: 50px;
+          &:nth-child(3) {
+            padding-top: 6px;
+          }
+          a {
+            @include rem(11);
+            color: $color-txt;
+            font-family: $font-en;
+            letter-spacing: 0.2em;
+            text-decoration: none;
+          }
+          .nav-logo {
+            display: inline-block;
+            text-indent: -9999em;
+            width: 35px;
+            height: 35px;
+            background: url(../../img/nav_logo.png) no-repeat center center;
+            background-size: 100% 100%;
+          }
+        }
       }
     }
   }
-}
-
-@media screen and (min-width:768px) {
-  .gnav {
-    position: fix;
-    display: flex;
-    list-style-type: none;
-    li {
-      width: 20%;
-      text-align: center;
-      line-height: 50px;
-      &:nth-child(3) {
-        padding-top: 6px;
-      }
-      a {
-        @include rem(11);
-        color: $color-txt;
-        font-family: $font-en;
-        letter-spacing: 0.2em;
-        text-decoration: none;
-      }
-      .nav-logo {
-        display: inline-block;
-        text-indent: -9999em;
-        width: 35px;
-        height: 35px;
-        background: url(../../img/nav_logo.png) no-repeat center center;
-        background-size: 100% 100%;
-      }
-    }
-  }
-}

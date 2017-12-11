@@ -1,47 +1,78 @@
- #about {
-   writing-mode: vertical-rl;
-   position: absolute;
-   right: 0;
-   padding: 70px 0 50px 0;
-   .about-img {
-     margin: 0 auto 35px;
-     width: 180px;
-     height: 180px;
-     background: url(../../img/about_img@2x.png);
-     background-size: 100% 100%;
-   }
-   .about-txt {
-     margin: 0 auto;
-     writing-mode: vertical-rl;
-     display: flex;
-     justify-content: flex-end;
-     flex-wrap: wrap;
-     &-top {
-       padding-bottom: 18px;
-       border-bottom: 1px solid #fff;
-       margin-bottom: 18px;
-     }
-     .name {
-       margin-left: 1.9em;
-     }
-     p {
-       text-indent: 1em;
-       height: 260px;
-     }
-   }
- }
- 
- @media screen and (min-width:768px) {
    #about {
-     writing-mode: vertical-rl;
-     position: absolute;
-     right: 0;
-     padding: 190px 0 140px 0;
      .about-img {
-       width: 200px;
-       height: 200px;
+       margin: 0 auto 35px;
+       width: 180px;
+       height: 180px;
        background: url(../../img/about_img@2x.png);
        background-size: 100% 100%;
      }
+     .about-txt {
+       margin: 0 auto;
+       width: 211px;
+       //     writing-mode: vertical-rl;
+       display: flex;
+       flex-direction: row-reverse;
+       justify-content: flex-end;
+       flex-wrap: wrap;
+       &-top {
+         display: flex;
+         flex-direction: row-reverse;
+         padding-bottom: 18px;
+         border-bottom: 1px solid #fff;
+         margin-bottom: 18px;
+       }
+       &-bottom {
+         display: flex;
+         flex-direction: row-reverse;
+       }
+       .name {
+         margin-left: 1.9em;
+       }
+       p {
+         writing-mode: vertical-rl;
+         text-indent: 1em;
+         height: 260px;
+       }
+     }
    }
- }
+   
+   @media screen and (min-width:768px) {
+     #about {
+       .about-img {
+         float: right;
+         margin: 25px 0 0 70px;
+         width: 180px;
+         height: 180px;
+         background: url(../../img/about_img@2x.png);
+         background-size: 100% 100%;
+       }
+       .about-txt {
+         float: right;
+         margin: 0 auto;
+         width: auto;
+         display: flex;
+         flex-direction: row-reverse;
+         justify-content: flex-end;
+         flex-wrap: wrap;
+         &-top {
+           display: flex;
+           flex-direction: row-reverse;
+           padding-bottom: 18px;
+           border-bottom: none;
+           margin-bottom: 18px;
+         }
+         &-bottom {
+           display: flex;
+           flex-direction: row-reverse;
+         }
+         .name {
+           margin-left: 1.9em;
+         }
+         p {
+           writing-mode: vertical-rl;
+           text-indent: 1em;
+           height: 260px;
+         }
+       }
+     }
+   }
