@@ -2,8 +2,7 @@
     position: relative;
     z-index: 50;
     height: 50px;
-    box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.5);
-    //      .nav-container {
+    box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.5); //      .nav-container {
     //      z-index: 100;
     //      position: absolute;
     //      bottom: 0;
@@ -51,8 +50,7 @@
     .menu-trigger.active span:nth-of-type(3) {
       -webkit-transform: translateY(-20px) rotate(45deg);
       transform: translateY(-20px) rotate(45deg);
-    }
-    //    メニューボタンここまで
+    } //    メニューボタンここまで
     .nav-logo.sp {
       display: inline-block;
       text-indent: -9999em;
@@ -95,9 +93,15 @@
       bottom: auto;
     }
   }
-  
+
   @media screen and (min-width:768px) {
     #nav {
+      .menu-trigger {
+        display: none;
+      }
+      .nav-logo.sp {
+        display: none;
+      }
       .gnav {
         position: fix;
         display: flex;
@@ -108,6 +112,7 @@
           text-align: center;
           line-height: 50px;
           &:nth-child(3) {
+            display: block;
             padding-top: 6px;
           }
           a {
