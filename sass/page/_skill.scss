@@ -51,8 +51,6 @@
     background: url(../../img/skill_bg@2x.jpg);
     background-size: cover;
     .skill-txt {
-      float: right;
-      margin: 0 auto;
       width: auto;
       display: flex;
       flex-direction: row-reverse;
@@ -60,6 +58,8 @@
       flex-wrap: wrap;
       &-top {
         border-bottom: none;
+        width: auto;
+        margin-left: 60px;
       }
     }
   }

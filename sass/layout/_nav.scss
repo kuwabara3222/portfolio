@@ -1,15 +1,15 @@
   #nav {
     position: relative;
-    z-index: 50;
+    z-index: 100;
     height: 50px;
-    box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.5); //      .nav-container {
-    //      z-index: 100;
-    //      position: absolute;
-    //      bottom: 0;
-    //      left: 0;
-    //      top: auto;
-    //      width: 100%;
-    //    }
+    box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.5);
+    background-color: rgba(27, 27, 27, 0.8);
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
     //    メニューボタン
     .menu-trigger,
     .menu-trigger span {
@@ -19,9 +19,11 @@
     }
     .menu-trigger {
       position: relative;
+      top: 5px;
       width: 50px;
       height: 44px;
       float: right;
+      transform: scale(0.4);
     }
     .menu-trigger span {
       position: absolute;
@@ -50,7 +52,8 @@
     .menu-trigger.active span:nth-of-type(3) {
       -webkit-transform: translateY(-20px) rotate(45deg);
       transform: translateY(-20px) rotate(45deg);
-    } //    メニューボタンここまで
+    }
+    //    メニューボタンここまで
     .nav-logo.sp {
       display: inline-block;
       text-indent: -9999em;
@@ -75,25 +78,40 @@
         line-height: 50px;
         background-color: rgba(27, 27, 27, 0.8);
         border-bottom: 1px solid #434343;
-        &:nth-child(3) {
-          display: none;
-        }
         a {
+          position: relative;
+          display: inline-block;
           @include rem(11);
           color: $color-txt;
           font-family: $font-en;
           letter-spacing: 0.2em;
           text-decoration: none;
         }
+        a::after {
+          position: absolute;
+          bottom: 7px;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 1px;
+          background: #797979;
+          transform: scale(0, 1);
+          transform-origin: center top;
+          transition: transform .3s;
+        }
+        a:hover::after {
+          transform: scale(1, 1);
+        }
+        &:nth-child(3) {
+          display: none;
+          a::after {
+            height: 0;
+          }
+        }
       }
     }
-    .sticky {
-      position: fixed;
-      top: 0;
-      bottom: auto;
-    }
   }
-
+  
   @media screen and (min-width:768px) {
     #nav {
       .menu-trigger {
@@ -102,33 +120,40 @@
       .nav-logo.sp {
         display: none;
       }
-      .gnav {
-        position: fix;
-        display: flex;
-        list-style-type: none;
-        li {
-          display: block;
-          width: 20%;
-          text-align: center;
-          line-height: 50px;
-          &:nth-child(3) {
-            display: block;
-            padding-top: 6px;
-          }
-          a {
-            @include rem(11);
-            color: $color-txt;
-            font-family: $font-en;
-            letter-spacing: 0.2em;
-            text-decoration: none;
-          }
-          .nav-logo {
-            display: inline-block;
-            text-indent: -9999em;
-            width: 35px;
-            height: 35px;
-            background: url(../../img/nav_logo.png) no-repeat center center;
-            background-size: 100% 100%;
+      .nav-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        .gnav {
+          position: static;
+          display: flex !important;
+          flex-wrap: nowrap;
+          list-style-type: none;
+          li {
+            display: block !important;
+            width: 20%;
+            text-align: center;
+            line-height: 50px;
+            border-bottom: none;
+            background-color: transparent;
+            &:nth-child(3) {
+              display: block;
+              padding-top: 6px;
+            }
+            a {
+              @include rem(11);
+              color: $color-txt;
+              font-family: $font-en;
+              letter-spacing: 0.2em;
+              text-decoration: none;
+            }
+            .nav-logo {
+              display: inline-block;
+              text-indent: -9999em;
+              width: 35px;
+              height: 35px;
+              background: url(../../img/nav_logo.png) no-repeat center center;
+              background-size: 100% 100%;
+            }
           }
         }
       }

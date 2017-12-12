@@ -14,3 +14,28 @@
     border: 1px solid #fff;
   }
 }
+
+@media screen and (min-width:768px) {
+  #contact {
+    background: url(../../img/contact_bg@2x.jpg) no-repeat center center;
+    background-size: cover;
+    .contact-box {
+      writing-mode: vertical-rl;
+      position: absolute;
+      margin: 0 auto;
+      top: 140px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 120px;
+      height: 260px;
+      padding: 15px;
+      background-color: $color-base;
+      border: 1px solid #fff;
+      .contact-txt2 {
+        @include rem(12);
+        font-family: $font-en;
+      }
+    }
+  }
+}
