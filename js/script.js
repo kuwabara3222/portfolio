@@ -55,18 +55,39 @@ $(function () {
   });
 
 
-  //  ナビゲーション
+  //スムーススクロール
   $(".gnav li a").click(function () {
-    $(".gnav").stop().slideToggle();
-    $(".menu-trigger").toggleClass('active');
-
     $this = $(this).attr("href");
     target = $($this).offset().top;
-    $("html,body").animate({
+    $("html,body").stop().animate({
       scrollTop: target - 50
     }, 2000);
     return false;
   });
+
+
+  //ナビゲーションの表示非表示
+  var $win = $(window);
+
+  $win.on('load resize', function () {
+    var windowWidth = window.innerWidth;
+
+    if (windowWidth > 768) {
+      //      PC
+
+    } else {
+      //  ナビゲーション
+      $(".gnav li a").click(function () {
+        $(".gnav").stop().slideToggle();
+        $(".menu-trigger").toggleClass('active');
+        return false;
+      });
+    }
+  });
+
+
+
+
 
   //  ホバー時のナビゲーション
   $(".nav-about").hover(function () {
@@ -102,8 +123,19 @@ $(function () {
   })
 
 
+  //  セクションの位置
+  //  $(window).scroll(function () {
+  //    if ($(window).scrollTop() >= $("#about").offset().top) {
+  //      $(".nav-about").html("私について");
+  //      $(".nav-about").css("font-family", "'游明朝 light',sans-serif");
+  //    } else {
+  //      $(".nav-about").html("ABOUT");
+  //      $(".nav-about").css("font-family", "'Montserrat thin',sans-serif");
+  //    }
+  //
+  //  });
 
-
+  //スティッキーヘッダー
   $navPos = $("#nav").offset().top;
 
   $(window).scroll(function () {
@@ -113,4 +145,48 @@ $(function () {
       $("#nav").removeClass("sticky");
     }
   });
+
+  //  モーダルウィンドウ
+  $(".modal-open").click(function () {
+    $("body").append("<div class='modal-overlay'></div>");
+    $('.modal-overlay').fadeIn('slow');
+    var modal = '#' + $(this).attr('data-target');
+    modalResize();
+    $(modal).fadeIn('slow');
+    $('.modal-overlay, .modal-close').off().click(function () {
+      $(modal).fadeOut('slow');
+      $('.modal-overlay').fadeOut('slow', function () {
+        $('.modal-overlay').remove();
+      });
+    });
+    $(window).on('resize', function () {
+      modalResize();
+    });
+
+    function modalResize() {
+      var w = $(window).width();
+      var h = $(window).height();
+      var x = (w - $(modal).outerWidth(true)) / 2;
+      var y = (h - $(modal).outerHeight(true)) / 2;
+
+      $(modal).css({
+        'left': x + 'px',
+        'top': y + 'px'
+      });
+    }
+  });
+
+
+  //CONTACTのボックスフェードイン
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= $("#contact").offset().top - 500) {
+      $(".contact-box").fadeIn();
+    } else {
+      $(".contact-box").fadeOut();
+    }
+
+  });
+
+
+
 })

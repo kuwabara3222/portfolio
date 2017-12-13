@@ -1,6 +1,6 @@
 #skill {
   width: 100%;
-  background: url(../../img/skill_bg_sp@2x.jpg) no-repeat center center;
+  background: url(../img/skill_bg_sp@2x.jpg) no-repeat center center;
   background-size: cover;
   .skill-txt {
     width: 211px;
@@ -29,7 +29,7 @@
           text-indent: -9999em;
           width: 30px;
           height: 30px;
-          background: url(../../img/skill_ico_github.svg);
+          background: url(../img/skill_ico_github.svg);
           background-size: 100% 100%;
         }
       }
@@ -48,7 +48,7 @@
 
 @media screen and (min-width:768px) {
   #skill {
-    background: url(../../img/skill_bg@2x.jpg);
+    background: url(../img/skill_bg@2x.jpg);
     background-size: cover;
     .skill-txt {
       width: auto;

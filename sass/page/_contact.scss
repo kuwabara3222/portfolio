@@ -1,6 +1,6 @@
 #contact {
   height: 550px;
-  background: url(../../img/contact_bg_sp@2x.jpg) no-repeat center center;
+  background: url(../img/contact_bg_sp@2x.jpg) no-repeat center center;
   background-size: cover;
   .contact-box {
     writing-mode: vertical-rl;
@@ -17,14 +17,15 @@
 
 @media screen and (min-width:768px) {
   #contact {
-    background: url(../../img/contact_bg@2x.jpg) no-repeat center center;
+    background: url(../img/contact_bg@2x.jpg) no-repeat center center;
     background-size: cover;
     .contact-box {
+      //            display: none;
       writing-mode: vertical-rl;
       position: absolute;
       margin: 0 auto;
       top: 140px;
-      left: 0;
+      left: -60px;
       bottom: 0;
       right: 0;
       width: 120px;
@@ -32,10 +33,6 @@
       padding: 15px;
       background-color: $color-base;
       border: 1px solid #fff;
-      .contact-txt2 {
-        @include rem(12);
-        font-family: $font-en;
-      }
     }
   }
 }
