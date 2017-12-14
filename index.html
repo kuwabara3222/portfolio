@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,21 +20,21 @@
     </a>
   </header>
   <nav id="nav">
-    <div class="nav-container">
-      <a href="#header" class="nav-logo sp">TOP</a>
-      <a class="menu-trigger" href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
+    <a href="#header" class="nav-logo sp">TOP</a>
+    <a class="menu-trigger" href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <div class="nav-inner">
       <ul class="gnav">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#skill">SKILL</a></li>
+        <li><a href="#about" class="nav-about">ABOUT</a></li>
+        <li><a href="#skill" class="nav-skill" class="nav-about">SKILL</a></li>
         <li>
           <a href="#header" class="nav-logo">TOP</a>
         </li>
-        <li><a href="#work">WORK</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#work" class="nav-work">WORK</a></li>
+        <li><a href="#contact" class="nav-contact">CONTACT</a></li>
       </ul>
     </div>
   </nav>
@@ -83,7 +84,7 @@
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>jQuery</li>
-                <li> <a href="#" class="github-link">github</a></li>
+                <!--                <li> <a href="#" class="github-link">github</a></li>-->
               </ul>
               <h3 class="skill-title design">デザイン</h3>
               <ul>
@@ -100,15 +101,37 @@
         <div class="container">
           <ul class="work-slide">
             <li>
-              <a href=""><img src="img/work_img1@2x.jpg" alt=""></a>
+              <a data-target="modal1" class="modal-open"><img src="img/work_img1@2x.jpg" alt=""></a>
             </li>
             <li>
-              <a href=""><img src="img/work_img2@2x.jpg" alt=""></a>
+              <a data-target="modal2" class="modal-open"><img src="img/work_img2@2x.jpg" alt=""></a>
             </li>
             <li>
-              <a href=""><img src="img/work_img3@2x.jpg" alt=""></a>
+              <a data-target="modal3" class="modal-open"><img src="img/work_img1@2x.jpg" alt=""></a>
+            </li>
+            <li>
+              <a data-target="modal4" class="modal-open"><img src="img/work_img3@2x.jpg" alt=""></a>
             </li>
           </ul>
+
+          <!--  Modal contents-->
+          <div id="modal1" class="modal-content">
+            <div class="modal-content-left">
+              <img src="img/work_win_img1@2x.jpg" alt="">
+            </div>
+            <div class="modal-content-right">
+              <h1>WWS（ウェブスタディサッポロ）</h1>
+              <p>
+                <span>制作期間</span><br> 2017年10月
+                <br>
+                <span>概要</span><br> グループ制作で作成した仮想サイトです。 ディレクション・デザイン・コーディングを 担当しました。
+              </p>
+              <a href="http://nextone304.webcrow.jp/2017_07/group/ookami/index.html" target="_blank" class="modal-link">>このサイトを見る</a>
+            </div>
+            <a class="modal-close"><img src="img/work_win_close.svg" alt=""></a>
+          </div>
+          <!--  Modal contentsここまで-->
+
         </div>
       </div>
     </section>
@@ -123,6 +146,7 @@
     </section>
   </main>
   <footer id="footer"></footer>
+
 
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>
