@@ -95,7 +95,7 @@ $(function () {
     $(this).css("font-family", "'游明朝 light',sans-serif");
   }, function () {
     $(this).html("ABOUT");
-    $(this).css("font-family", "'Montserrat thin',sans-serif");
+    $(this).css("font-family", "'Montserrat',sans-serif");
   })
 
   $(".nav-skill").hover(function () {
@@ -103,7 +103,7 @@ $(function () {
     $(this).css("font-family", "'游明朝 light',sans-serif");
   }, function () {
     $(this).html("SKILL");
-    $(this).css("font-family", "'Montserrat thin',sans-serif");
+    $(this).css("font-family", "'Montserrat',sans-serif");
   })
 
   $(".nav-work").hover(function () {
@@ -111,7 +111,7 @@ $(function () {
     $(this).css("font-family", "'游明朝 light',sans-serif");
   }, function () {
     $(this).html("WORK");
-    $(this).css("font-family", "'Montserrat thin',sans-serif");
+    $(this).css("font-family", "'Montserrat',sans-serif");
   })
 
   $(".nav-contact").hover(function () {
@@ -119,7 +119,7 @@ $(function () {
     $(this).css("font-family", "'游明朝 light',sans-serif");
   }, function () {
     $(this).html("CONTACT");
-    $(this).css("font-family", "'Montserrat thin',sans-serif");
+    $(this).css("font-family", "'Montserrat',sans-serif");
   })
 
 

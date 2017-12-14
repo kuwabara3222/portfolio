@@ -5,12 +5,12 @@
       display: block;
     }
   }
-  
+
   @mixin rem($base:14) {
     font-size: $base+px;
     font-size: ($base/10)+rem;
   }
-  
+
   .inner {
     margin: 0 auto;
     max-width: 1000px;
@@ -20,20 +20,20 @@
     position: relative;
     padding: 70px 0 50px 0;
   }
-  
+
   @media screen and (min-width:768px) {
     .inner {
       padding: 120px 0 140px 0;
     }
   }
-  
+
   .container {
     width: auto;
     margin: 0 auto;
     position: relative;
     padding: 50px auto 1px;
   }
-  
+
   $size-max: 1000px;
   $color-base: #1b1b1b;
   $color-txt: #fff;
@@ -43,6 +43,7 @@
   $lh-txt: 1.9;
   $ls-txt: 0.2em;
   @import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+  @import url('https://fonts.googleapis.com/earlyaccess/sawarabigothic.css');
   $font-jp: "游明朝 light",
   "ヒラギノ明朝 ProN W3",
   "Hiragino Mincho ProN",
@@ -50,6 +51,6 @@
   "MS PMincho",
   "Noto Sans Japanese light",
   Sans-Serif;
-  @import url('https://fonts.googleapis.com/css?family=Montserrat');
-  $font-en: 'Montserrat thin',
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:100');
+  $font-en: 'Montserrat',
   sans-serif;
