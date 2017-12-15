@@ -1,7 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 @import url("https://fonts.googleapis.com/earlyaccess/sawarabigothic.css");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200");
+#wrapper {
+  height: 100%;
+  width: 100%; }
+
 .inner {
   margin: 0 auto;
   max-width: 1000px;
@@ -17,15 +21,17 @@
   position: relative;
   padding: 70px 0 50px 0; }
 
+.container {
+  margin: 0 auto;
+  padding: 50px 0 1px; }
+
 @media screen and (min-width: 768px) {
   .inner {
-    padding: 120px 0 140px 0; } }
+    padding: 120px 15px 140px; } }
 
-.container {
-  width: auto;
-  margin: 0 auto;
-  position: relative;
-  padding: 50px auto 1px; }
+@media screen and (min-width: 1000px) {
+  .inner {
+    padding: 120px 0 140px; } }
 
 /* 
 html5doctor.com Reset Stylesheet
@@ -353,6 +359,22 @@ img {
       color: black;
       opacity: 0.75; }
 
+#loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -150px;
+  margin-left: -200px; }
+
+#loader-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #1b1b1b;
+  z-index: 500; }
+
 #nav {
   position: relative;
   z-index: 100;
@@ -548,7 +570,6 @@ img {
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-  width: auto;
   letter-spacing: 0.2em;
   font-size: 30px;
   font-size: 3rem;
@@ -562,27 +583,14 @@ img {
     padding-top: 20px; }
 
 #about .about-img {
-  margin: 0 auto 35px;
+  margin: 0 auto 35px auto;
   width: 180px;
   height: 180px;
   background: url(../img/about_img@2x.png);
   background-size: 100% 100%; }
 
 #about .about-txt {
-  margin: 0 auto;
-  width: 211px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  width: 211px; }
   #about .about-txt-top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -614,7 +622,7 @@ img {
 @media screen and (min-width: 768px) {
   #about .about-img {
     float: right;
-    margin: 25px 0 55px 70px;
+    margin: 25px 0 55px 45px;
     width: 180px;
     height: 180px;
     background: url(../img/about_img@2x.png);
@@ -623,6 +631,7 @@ img {
     float: right;
     margin: 0 auto;
     width: auto;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -643,9 +652,9 @@ img {
       -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
       flex-direction: row-reverse;
-      padding-bottom: 18px;
+      padding-bottom: 0;
       border-bottom: none;
-      margin-bottom: 18px; }
+      margin-bottom: 0; }
     #about .about-txt-bottom {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -662,6 +671,10 @@ img {
       writing-mode: vertical-rl;
       text-indent: 1em;
       height: 260px; } }
+
+@media screen and (min-width: 1000px) {
+  #about .about-img {
+    margin: 25px 0 55px 70px; } }
 
 #skill {
   width: 100%;
@@ -705,7 +718,8 @@ img {
     #skill .skill-txt .design {
       margin-right: 1.9em; }
     #skill .skill-txt li {
-      margin-top: 3em; }
+      list-style-type: none;
+      margin-top: 2em; }
     #skill .skill-txt p {
       height: 260px; }
 
@@ -834,12 +848,12 @@ a.modal-open:hover {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 590px;
+      width: 870px;
       height: 400px;
-      padding: 60px 40px; }
+      padding: 70px 40px; }
       #work .modal-content-right {
         max-width: 335px;
-        margin-left: 30px; } }
+        margin-left: 50px; } }
 
 #contact {
   height: 550px;

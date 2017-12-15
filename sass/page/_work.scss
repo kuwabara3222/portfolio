@@ -124,12 +124,12 @@ a.modal-open:hover {
     }
     .modal-content {
       display: flex;
-      width: 590px;
+      width: 870px;
       height: 400px;
-      padding: 60px 40px;
+      padding: 70px 40px;
       &-right {
         max-width: 335px;
-        margin-left: 30px;
+        margin-left: 50px;
       }
     }
   }

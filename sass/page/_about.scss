@@ -1,19 +1,13 @@
    #about {
      .about-img {
-       margin: 0 auto 35px;
+       margin: 0 auto 35px auto;
        width: 180px;
        height: 180px;
        background: url(../img/about_img@2x.png);
        background-size: 100% 100%;
      }
      .about-txt {
-       margin: 0 auto;
        width: 211px;
-       //     writing-mode: vertical-rl;
-       display: flex;
-       flex-direction: row-reverse;
-       justify-content: flex-end;
-       flex-wrap: wrap;
        &-top {
          display: flex;
          flex-direction: row-reverse;
@@ -40,7 +34,7 @@
      #about {
        .about-img {
          float: right;
-         margin: 25px 0 55px 70px;
+         margin: 25px 0 55px 45px;
          width: 180px;
          height: 180px;
          background: url(../img/about_img@2x.png);
@@ -50,6 +44,7 @@
          float: right;
          margin: 0 auto;
          width: auto;
+         height: auto;
          display: flex;
          flex-direction: row-reverse;
          justify-content: flex-end;
@@ -57,9 +52,9 @@
          &-top {
            display: flex;
            flex-direction: row-reverse;
-           padding-bottom: 18px;
+           padding-bottom: 0;
            border-bottom: none;
-           margin-bottom: 18px;
+           margin-bottom: 0;
          }
          &-bottom {
            display: flex;
@@ -73,6 +68,14 @@
            text-indent: 1em;
            height: 260px;
          }
+       }
+     }
+   }
+   
+   @media screen and (min-width:1000px) {
+     #about {
+       .about-img {
+         margin: 25px 0 55px 70px;
        }
      }
    }

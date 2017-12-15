@@ -1,5 +1,17 @@
 $(function () {
 
+  //  loader
+  $(function () {
+    var h = $(window).height(); //ブラウザウィンドウの高さを取得
+    $('#main-contents').css('display', 'none'); //初期状態ではメインコンテンツを非表示
+    $('#loader-bg ,#loader').height(h).css('display', 'block'); //ウィンドウの高さに合わせでローディング画面を表示
+  });
+  $(window).load(function () {
+    $('#loader-bg').delay(900).fadeOut(800); //$('#loader-bg').fadeOut(800);でも可
+    $('#loader').delay(600).fadeOut(300); //$('#loader').fadeOut(300);でも可
+    $('#main-contents').css('display', 'block'); // ページ読み込みが終わったらメインコンテンツを表示する
+  });
+
   //slick
   $('.work-slide').slick({
     infinite: true,
@@ -122,18 +134,6 @@ $(function () {
     $(this).css("font-family", "'Montserrat',sans-serif");
   })
 
-
-  //  セクションの位置
-  //  $(window).scroll(function () {
-  //    if ($(window).scrollTop() >= $("#about").offset().top) {
-  //      $(".nav-about").html("私について");
-  //      $(".nav-about").css("font-family", "'游明朝 light',sans-serif");
-  //    } else {
-  //      $(".nav-about").html("ABOUT");
-  //      $(".nav-about").css("font-family", "'Montserrat thin',sans-serif");
-  //    }
-  //
-  //  });
 
   //スティッキーヘッダー
   $navPos = $("#nav").offset().top;

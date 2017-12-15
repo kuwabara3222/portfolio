@@ -1,0 +1,17 @@
+#loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -150px;
+  margin-left: -200px;
+}
+
+#loader-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: $color-base;
+  z-index: 500;
+}

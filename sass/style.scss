@@ -6,6 +6,7 @@
 //js
 @import "js/slick";
 @import "js/slick-theme";
+@import "js/loader";
 //レイアウト
 @import "layout/nav";
 @import "layout/header";
@@ -13,7 +14,6 @@
 //パーツ
 @import "module/title";
 //ページ
-@import "page/mv";
 @import "page/about";
 @import "page/skill";
 @import "page/work";
