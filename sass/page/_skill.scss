@@ -20,19 +20,6 @@
     &-bottom {
       writing-mode: vertical-rl;
       height: 260px;
-      .github {
-        p {
-          display: none;
-        }
-        &-link {
-          display: block;
-          text-indent: -9999em;
-          width: 30px;
-          height: 30px;
-          background: url(../img/skill_ico_github.svg);
-          background-size: 100% 100%;
-        }
-      }
     }
     .design {
       margin-right: 1.9em;

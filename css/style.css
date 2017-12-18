@@ -706,15 +706,6 @@ img {
       -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
       height: 260px; }
-      #skill .skill-txt-bottom .github p {
-        display: none; }
-      #skill .skill-txt-bottom .github-link {
-        display: block;
-        text-indent: -9999em;
-        width: 30px;
-        height: 30px;
-        background: url(../img/skill_ico_github.svg);
-        background-size: 100% 100%; }
     #skill .skill-txt .design {
       margin-right: 1.9em; }
     #skill .skill-txt li {
@@ -778,18 +769,20 @@ a.modal-open:hover {
 .modal-content {
   position: fixed;
   width: 300px;
-  height: 530px;
+  height: 510px;
   z-index: 300;
   margin: 10px;
   padding: 15px 15px 50px;
   border: 2px solid #fff;
   background-color: transparent;
   font-family: "Sawarabi Gothic", sans-serif;
-  line-height: 1.9; }
+  line-height: 1.9;
+  font-size: 13px;
+  font-size: 1.3rem; }
   .modal-content .modal-content-left {
     max-width: 390px;
     margin-bottom: 20px; }
-  .modal-content h1 {
+  .modal-content h3 {
     margin-bottom: 20px; }
   .modal-content p {
     margin-bottom: 20px; }
@@ -827,7 +820,9 @@ a.modal-open:hover {
     display: flex;
     width: 590px;
     height: 400px;
-    padding: 60px 40px; }
+    padding: 60px 40px;
+    font-size: 14px;
+    font-size: 1.4rem; }
     #work .modal-content-right {
       max-width: 335px;
       margin-left: 30px; }
