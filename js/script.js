@@ -73,7 +73,7 @@ $(function () {
     target = $($this).offset().top;
     $("html,body").stop().animate({
       scrollTop: target - 50
-    }, 2000);
+    }, 1000);
     return false;
   });
 
